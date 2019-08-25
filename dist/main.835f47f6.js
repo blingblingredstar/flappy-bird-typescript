@@ -1,7 +1,7 @@
 parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcelRequire,u="function"==typeof require&&require;function f(t,n){if(!r[t]){if(!e[t]){var i="function"==typeof parcelRequire&&parcelRequire;if(!n&&i)return i(t,!0);if(o)return o(t,!0);if(u&&"string"==typeof t)return u(t);var c=new Error("Cannot find module '"+t+"'");throw c.code="MODULE_NOT_FOUND",c}p.resolve=function(r){return e[t][1][r]||r},p.cache={};var l=r[t]=new f.Module(t);e[t][0].call(l.exports,p,l,l.exports,this)}return r[t].exports;function p(e){return f(p.resolve(e))}}f.isParcelRequire=!0,f.Module=function(e){this.id=e,this.bundle=f,this.exports={}},f.modules=e,f.cache=r,f.parent=o,f.register=function(r,t){e[r]=[function(e,r){r.exports=t},{}]};for(var c=0;c<t.length;c++)try{f(t[c])}catch(e){i||(i=e)}if(t.length){var l=f(t[t.length-1]);"object"==typeof exports&&"undefined"!=typeof module?module.exports=l:"function"==typeof define&&define.amd?define(function(){return l}):n&&(this[n]=l)}if(parcelRequire=f,i)throw i;return f}({"wizM":[function(require,module,exports) {
 "use strict";function t(t,s){if(!(t instanceof s))throw new TypeError("Cannot call a class as a function")}Object.defineProperty(exports,"__esModule",{value:!0});var s=function s(e,i,n,o){t(this,s),this.sX=e,this.sY=i,this.width=n,this.height=o};exports.default=s;
 },{}],"krU1":[function(require,module,exports) {
-module.exports="/sprite.690aeca8.png";
+module.exports="/flappy-bird-typescript/dist/sprite.690aeca8.png";
 },{}],"B/d0":[function(require,module,exports) {
 "use strict";var e=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(exports,"__esModule",{value:!0});var t=e(require("../img/sprite.png")),r=new Image;r.src=t.default,exports.default=r;
 },{"../img/sprite.png":"krU1"}],"cgO5":[function(require,module,exports) {
@@ -11,15 +11,15 @@ module.exports="/sprite.690aeca8.png";
 },{"./Background":"cgO5","./game":"IHHd"}],"u7YK":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.DEGREE=Math.PI/180;
 },{}],"P8ct":[function(require,module,exports) {
-module.exports="/sfx_point.28c85e88.wav";
+module.exports="/flappy-bird-typescript/dist/sfx_point.28c85e88.wav";
 },{}],"sh60":[function(require,module,exports) {
-module.exports="/sfx_flap.0cde8a86.wav";
+module.exports="/flappy-bird-typescript/dist/sfx_flap.0cde8a86.wav";
 },{}],"K6P8":[function(require,module,exports) {
-module.exports="/sfx_hit.37ca5fd4.wav";
+module.exports="/flappy-bird-typescript/dist/sfx_hit.37ca5fd4.wav";
 },{}],"I+5E":[function(require,module,exports) {
-module.exports="/sfx_swooshing.3331d0d7.wav";
+module.exports="/flappy-bird-typescript/dist/sfx_swooshing.3331d0d7.wav";
 },{}],"ko5l":[function(require,module,exports) {
-module.exports="/sfx_die.2301eeb9.wav";
+module.exports="/flappy-bird-typescript/dist/sfx_die.2301eeb9.wav";
 },{}],"SWJ8":[function(require,module,exports) {
 "use strict";var e=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(exports,"__esModule",{value:!0});var r=e(require("../audio/sfx_point.wav")),o=e(require("../audio/sfx_flap.wav")),s=e(require("../audio/sfx_hit.wav")),t=e(require("../audio/sfx_swooshing.wav")),u=e(require("../audio/sfx_die.wav"));exports.SCORE_S=new Audio,exports.SCORE_S.src=r.default,exports.FLAP=new Audio,exports.FLAP.src=o.default,exports.HIT=new Audio,exports.HIT.src=s.default,exports.SWOOSHING=new Audio,exports.SWOOSHING.src=t.default,exports.DIE=new Audio,exports.DIE.src=u.default;
 },{"../audio/sfx_point.wav":"P8ct","../audio/sfx_flap.wav":"sh60","../audio/sfx_hit.wav":"K6P8","../audio/sfx_swooshing.wav":"I+5E","../audio/sfx_die.wav":"ko5l"}],"51IK":[function(require,module,exports) {
@@ -33,4 +33,4 @@ module.exports="/sfx_die.2301eeb9.wav";
 },{"./Background":"cgO5","../main":"ZCfc","./Foreground":"0Bw4","./Bird":"51IK","./GetStatus":"spbf","./Pipe":"vq0B","./Audio":"SWJ8"}],"ZCfc":[function(require,module,exports) {
 "use strict";var t=this&&this.__importDefault||function(t){return t&&t.__esModule?t:{default:t}};Object.defineProperty(exports,"__esModule",{value:!0}),exports.cvs=document.getElementById("cvs"),exports.ctx=exports.cvs.getContext("2d");var e=t(require("./ts/game"));exports.cvs.addEventListener("click",function(t){switch(e.default.state.current){case e.default.state.getReady:e.default.state.setGaming();break;case e.default.state.gaming:if(e.default.bird.sY-e.default.bird.radius<=0)return;e.default.bird.flap();break;case e.default.state.gameOver:var a=exports.cvs.getBoundingClientRect(),s=t.clientX-a.left,r=t.clientY-a.top;s>=e.default.startBtn.x&&s<=e.default.startBtn.x+e.default.startBtn.width&&r>=e.default.startBtn.y&&r<=e.default.startBtn.y+e.default.startBtn.height&&(e.default.pipe.reset(),e.default.bird.speedReset(),e.default.score.reset(),e.default.state.setGameReady())}}),e.default.loop();
 },{"./ts/game":"IHHd"}]},{},["ZCfc"], null)
-//# sourceMappingURL=/main.835f47f6.js.map
+//# sourceMappingURL=/flappy-bird-typescript/dist/main.835f47f6.js.map
