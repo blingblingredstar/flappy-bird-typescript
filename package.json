@@ -1,0 +1,21 @@
+{
+  "name": "flappy-bird-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "victorLiu",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^1.18.2",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.5.3"
+  }
+}
